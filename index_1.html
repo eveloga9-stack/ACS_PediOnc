@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#00437B">
+<meta name="description" content="PediOncAlert pocket algorithm card — Acute Chest Syndrome. St. Jude Night Curriculum. Internal educational reference.">
+<title>ACS Pocket Algorithm Card — PediOncAlert</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2300437B'/><text x='50' y='70' font-size='58' font-family='system-ui' font-weight='700' fill='%23FDB71A' text-anchor='middle'>A</text></svg>">
+<style>
+:root{
+  --navy:#00437B; --deep:#002A52; --red:#D11947; --gold:#FDB71A;
+  --aqua:#4FA6BA; --laqua:#79D0E3; --ink:#1F2D3D; --crim:#8D0034;
+  --bg:#FFFFFF; --surface:#FFFFFF; --text:var(--ink); --muted:#5A6B7C;
+  --line:#DFE5EB; --chip:#F4F7FA; --hdr:#00437B;
+  --shadow:0 1px 2px rgba(16,32,54,.06), 0 8px 24px rgba(16,32,54,.07);
+  --r:14px; --maxw:720px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0B1520; --surface:#111E2C; --text:#E8EFF6; --muted:#93A6B8;
+    --line:#22384C; --chip:#16283A; --hdr:#071B2E; --navy:#5FA8DC;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+html[data-theme="dark"]{
+  --bg:#0B1520; --surface:#111E2C; --text:#E8EFF6; --muted:#93A6B8;
+  --line:#22384C; --chip:#16283A; --hdr:#071B2E; --navy:#5FA8DC;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+html[data-theme="light"]{
+  --bg:#FFFFFF; --surface:#FFFFFF; --text:#1F2D3D; --muted:#5A6B7C;
+  --line:#DFE5EB; --chip:#F4F7FA; --hdr:#00437B; --navy:#00437B;
+  --shadow:0 1px 2px rgba(16,32,54,.06), 0 8px 24px rgba(16,32,54,.07);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font:400 17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Calibri,"Helvetica Neue",Arial,sans-serif;
+  padding-bottom:env(safe-area-inset-bottom);
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 16px 56px}
+
+header{
+  background:var(--hdr); color:#fff;
+  padding:calc(18px + env(safe-area-inset-top)) 16px 18px;
+  border-bottom:4px solid var(--red);
+}
+.hin{max-width:var(--maxw); margin:0 auto; display:flex; align-items:flex-start; gap:12px}
+.eyebrow{font-size:12px; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 4px}
+h1{font-size:23px; line-height:1.2; font-weight:700; margin:0}
+.sub{font-size:13px; color:var(--laqua); margin:6px 0 0}
+#themeBtn{
+  margin-left:auto; flex:none; background:rgba(255,255,255,.12); color:#fff;
+  border:1px solid rgba(255,255,255,.25); border-radius:10px;
+  width:44px; height:44px; font-size:19px; cursor:pointer; line-height:1;
+}
+
+nav{position:sticky; top:0; z-index:20; background:var(--bg);
+  border-bottom:1px solid var(--line); box-shadow:0 2px 8px rgba(16,32,54,.05)}
+.tabs{max-width:var(--maxw); margin:0 auto; display:flex; gap:6px; padding:8px 16px}
+.tab{
+  flex:1 1 0; min-height:46px; padding:10px 8px; border:0; border-radius:10px;
+  background:transparent; color:var(--muted); font-size:14px; font-weight:700;
+  letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
+}
+.tab[aria-selected="true"]{background:var(--navy); color:#fff}
+html[data-theme="dark"] .tab[aria-selected="true"]{color:#07131F}
+@media (prefers-color-scheme: dark){
+  html:not([data-theme="light"]) .tab[aria-selected="true"]{color:#07131F}
+}
+.panel{display:none; padding-top:20px}
+.panel.on{display:block}
+
+.kicker{font-size:12px; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+  color:var(--red); margin:4px 0 6px}
+.lede{font-size:24px; font-weight:700; color:var(--navy); margin:0 0 16px; line-height:1.22}
+
+.step{
+  display:flex; gap:13px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r); padding:15px; margin-bottom:11px; box-shadow:var(--shadow);
+}
+.num{
+  flex:none; width:31px; height:31px; border-radius:50%; background:var(--navy);
+  color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center;
+  justify-content:center; margin-top:2px;
+}
+html[data-theme="dark"] .num{color:#07131F}
+.step p{margin:0; font-size:17px}
+b,strong{font-weight:700}
+.hl{color:var(--red); font-weight:700}
+
+.alert{
+  display:flex; gap:12px; align-items:center; background:var(--red); color:#fff;
+  border-radius:var(--r); padding:14px 16px; margin:0 0 18px; font-weight:700; font-size:17px;
+}
+.alert .bang{
+  flex:none; width:30px; height:30px; border-radius:50%; background:var(--gold);
+  color:var(--crim); display:flex; align-items:center; justify-content:center; font-size:19px;
+}
+.policy{
+  display:block; text-align:center; background:var(--chip); border:1px solid var(--aqua);
+  border-radius:var(--r); padding:15px; margin-top:14px; font-size:16px; font-weight:700;
+  color:var(--navy); text-decoration:none;
+}
+footer{
+  max-width:var(--maxw); margin:30px auto 0; padding:16px 16px 0;
+  border-top:1px solid var(--line); font-size:13px; color:var(--muted);
+}
+footer p{margin:0 0 6px}
+
+@media print{
+  header{background:#00437B !important}
+  nav,#themeBtn{display:none !important}
+  .panel{display:block !important; page-break-inside:avoid; padding-top:8px}
+  .panel + .panel{page-break-before:always}
+  body{font-size:11pt; background:#fff; color:#000}
+  *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hin">
+    <div>
+      <p class="eyebrow">PediOncAlert · Pocket Reference</p>
+      <h1>Acute Chest Syndrome</h1>
+      <p class="sub">St. Jude Children's Research Hospital · Hospitalist Department</p>
+    </div>
+    <button id="themeBtn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+
+<nav>
+  <div class="tabs" role="tablist" aria-label="Card side">
+    <button class="tab" role="tab" id="t-front" aria-controls="p-front" aria-selected="true">Front</button>
+    <button class="tab" role="tab" id="t-back"  aria-controls="p-back"  aria-selected="false">Back</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<section class="panel on" id="p-front" role="tabpanel" aria-labelledby="t-front">
+  <p class="kicker">Front — Respiratory distress</p>
+  <p class="lede">First 20 minutes</p>
+
+  <div class="alert"><span class="bang">!</span><span>Antibiotics within ≤ 60 minutes.</span></div>
+
+  <div class="step"><div class="num">1</div><div><p>
+    <b>Recognize:</b> respiratory distress, hypoxia.
+  </p></div></div>
+
+  <div class="step"><div class="num">2</div><div><p>
+    <b>Obtain STAT</b> CBC/D, retic, type &amp; screen, chems, blood cultures, VBG, RVP,
+    2-view (PA &amp; lateral) CXR. <span class="hl">Start broad-spectrum antibiotics
+    (ceftriaxone)</span>, ± azithromycin.
+  </p></div></div>
+
+  <div class="step"><div class="num">3</div><div><p>
+    <b>10–20 mL/kg bolus if hypotensive</b> — be cautious and AVOID fluid volume overload —
+    then reassess.
+  </p></div></div>
+
+  <div class="step"><div class="num">4</div><div><p>
+    <b>Notify Heme attending</b> to discuss patient status and potential for PRBC transfusion
+    as treatment for ACS. Escalate per the <b>sJAWS algorithm</b> and the <b>Sepsis Bundle</b>.
+  </p></div></div>
+
+  <a class="policy" href="#" id="policyLink">Full institutional algorithm &amp; guidelines →</a>
+</section>
+
+<section class="panel" id="p-back" role="tabpanel" aria-labelledby="t-back">
+  <p class="kicker">Back — Escalation support</p>
+  <p class="lede">When to call, and who</p>
+
+  <div class="alert"><span class="bang">!</span><span>No improvement after supplemental O₂ → escalate to PICU.</span></div>
+
+  <div class="step"><div class="num">1</div><div><p>
+    If no improvement after supplemental O₂ → <b>escalate to the PICU team</b>.
+  </p></div></div>
+
+  <div class="step"><div class="num">2</div><div><p>
+    <b>RRT triggers:</b> hypotension, altered mental status, and/or increased work of
+    breathing &amp; O₂ requirement.
+  </p></div></div>
+
+  <div class="step"><div class="num">3</div><div><p>
+    <b>Continue antibiotics</b> (consider escalating) and supportive care while preparing
+    for transfer.
+  </p></div></div>
+
+  <div class="step"><div class="num">4</div><div><p>
+    <b>Communicate updates</b> to the Heme attending and charge nurse.
+  </p></div></div>
+
+  <div class="step"><div class="num">5</div><div><p>
+    <b>Who to call:</b> on-call Heme attending · PICU · Hospitalist MD or APP ·
+    Rapid Response Team.
+  </p></div></div>
+</section>
+
+<footer>
+  <p><b>Internal educational reference.</b> Supports — does not replace — clinical judgment and current institutional policy.</p>
+  <p>PediOncAlert Night Curriculum · St. Jude Children's Research Hospital, Hospitalist Department.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.panel'));
+  function show(id){
+    tabs.forEach(function(t){
+      t.setAttribute('aria-selected', t.getAttribute('aria-controls') === id ? 'true' : 'false');
+    });
+    panels.forEach(function(p){ p.classList.toggle('on', p.id === id); });
+    if (history.replaceState) history.replaceState(null,'','#'+id.replace('p-',''));
+    window.scrollTo(0,0);
+  }
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ show(t.getAttribute('aria-controls')); });
+    t.addEventListener('keydown', function(e){
+      var i = tabs.indexOf(t), n = null;
+      if (e.key === 'ArrowRight') n = tabs[(i+1) % tabs.length];
+      if (e.key === 'ArrowLeft')  n = tabs[(i-1+tabs.length) % tabs.length];
+      if (n){ e.preventDefault(); n.focus(); show(n.getAttribute('aria-controls')); }
+    });
+  });
+  function fromHash(){
+    var h = (location.hash || '').replace('#','');
+    if (h && document.getElementById('p-'+h)) show('p-'+h);
+  }
+  fromHash();
+  window.addEventListener('hashchange', fromHash);
+
+  var btn = document.getElementById('themeBtn');
+  var order = [null,'light','dark'], idx = 0;
+  btn.addEventListener('click', function(){
+    idx = (idx+1) % order.length;
+    if (order[idx]) document.documentElement.setAttribute('data-theme', order[idx]);
+    else document.documentElement.removeAttribute('data-theme');
+    btn.textContent = order[idx] === 'light' ? '☀' : (order[idx] === 'dark' ? '☾' : '◐');
+  });
+})();
+</script>
+</body>
+</html>
